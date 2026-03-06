@@ -268,7 +268,14 @@ const GuideArticle = () => {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <button className="p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all text-slate-400 hover:text-white border border-white/5">
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(window.location.href);
+                alert("URL Copied to clipboard!");
+              }}
+              className="p-4 bg-white/5 hover:bg-white/10 rounded-2xl transition-all text-slate-400 hover:text-white border border-white/5"
+              title="Copy link to article"
+            >
               <Share2 className="w-5 h-5" />
             </button>
           </div>

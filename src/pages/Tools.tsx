@@ -215,8 +215,8 @@ const Tools = () => {
                         Need a specific network analyzer or FTP troubleshooting utility that isn't listed here? Our community is constantly building new tools for the BDIX ecosystem.
                     </p>
                     <div className="flex gap-4">
-                        <button className="px-8 py-3 bg-white text-black font-black rounded-xl hover:bg-slate-200 transition-colors">Contribute</button>
-                        <button className="px-8 py-3 bg-slate-800 text-white font-bold rounded-xl hover:bg-slate-700 transition-colors">Report Bug</button>
+                        <a href="https://github.com/tanveerpy/iccftp" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white text-black font-black rounded-xl hover:bg-slate-200 transition-colors inline-flex items-center justify-center">Contribute</a>
+                        <a href="https://github.com/tanveerpy/iccftp/issues" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-slate-800 text-white font-bold rounded-xl hover:bg-slate-700 transition-colors inline-flex items-center justify-center">Report Bug</a>
                     </div>
                 </div>
             </div>

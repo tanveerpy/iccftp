@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { Terminal, Copy, ExternalLink, Network, Activity, HardDrive, Shield, Search, Zap } from 'lucide-react';
+import { Terminal, Copy, Network, Activity, HardDrive, Shield, Search, Zap } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const IPDetail = () => {
@@ -16,7 +16,7 @@ const IPDetail = () => {
                 schema={{
                     "@context": "https://schema.org",
                     "@type": "WebPage",
-                    "name": `IP Detail: ${formattedIP}`,
+                    "name": `IP Detail: ${formattedIP} `,
                     "description": `Detailed connection parameters for the BDIX node at ${formattedIP}.`
                 }}
             />
@@ -32,22 +32,59 @@ const IPDetail = () => {
                     <div className="w-10" />
                 </div>
 
-                <div className="p-8 md:p-16">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-                        <div>
-                            <div className="flex items-center gap-3 text-accent font-bold mb-4">
-                                <Network className="w-5 h-5" />
-                                <span className="uppercase tracking-widest text-xs">Node Detail</span>
-                            </div>
-                            <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-4">{formattedIP}</h1>
-                            <p className="text-slate-500 text-lg">BDIX Optimized Network Resource</p>
+                <div className="p-8 md:p-16 flex flex-col items-center justify-center text-center">
+                    <div className="w-24 h-24 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mb-8 relative">
+                        <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full animate-pulse" />
+                        <HardDrive className="w-10 h-10 text-white relative z-10" />
+                    </div>
+                    <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-4">{formattedIP}</h1>
+                    <div className="flex items-center gap-3 text-slate-400 mb-12">
+                        <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
+                            <span className="font-bold">Active Node</span>
                         </div>
-
-                        <button className="flex items-center gap-3 px-8 py-4 bg-primary text-white font-black rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(37,99,235,0.3)]">
-                            <ExternalLink className="w-5 h-5" /> Launch Server
-                        </button>
+                        <span className="w-1 h-1 rounded-full bg-slate-700" />
+                        <span className="font-bold">BDIX Region: Dhaka</span>
                     </div>
 
+                    <a href={`http://${formattedIP}`} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 px-8 py-4 bg-primary text-white font-black rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(37,99,235,0.3)]">
+                        <Zap className="w-5 h-5 fill-current" /> Open Server Portal
+                    </a >
+                </div >
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5">
+                    {/* Detail Cards */}
+                    <div className="bg-slate-900 p-8 hover:bg-slate-800/80 transition-colors group">
+                        <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors mb-6">
+                            <Network className="w-5 h-5" />
+                        </div>
+                        <h3 className="text-sm font-black text-slate-500 uppercase tracking-widest mb-2">Protocol</h3>
+                        <div className="text-2xl font-bold text-white">HTTP / FTP</div>
+                    </div>
+                    <div className="bg-slate-900 p-8 hover:bg-slate-800/80 transition-colors group">
+                        <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors mb-6">
+                            <Activity className="w-5 h-5" />
+                        </div>
+                        <h3 className="text-sm font-black text-slate-500 uppercase tracking-widest mb-2">Average Latency</h3>
+                        <div className="text-2xl font-bold text-white">2.4 ms</div>
+                    </div>
+                </div>
+
+                <div className="p-8 bg-slate-900 border-t border-white/5">
+                    <h3 className="text-sm font-black text-slate-500 uppercase tracking-widest mb-4">Direct Connection String</h3>
+                    <div className="flex items-center justify-between p-4 bg-black/50 border border-white/10 rounded-xl font-mono text-sm text-primary">
+                        <span>ftp://{formattedIP}:21/</span>
+                        <button
+                            onClick={() => navigator.clipboard.writeText(`ftp://${formattedIP}:21/`)}
+                            title="Copy to clipboard"
+                            className="p-2 hover:bg-white/5 rounded-lg text-slate-500 hover:text-white transition-colors"
+                        >
+                            <Copy className="w-4 h-4" />
+                        </button>
+                    </div>
+                </div>
+
+                <div className="p-8 md:p-16">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                         {[
                             { label: 'Latency', value: '2ms', icon: Activity, color: 'text-green-500' },
@@ -117,8 +154,8 @@ const IPDetail = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
