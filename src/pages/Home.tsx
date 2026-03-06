@@ -14,6 +14,7 @@ const Home = () => {
     const [onlineOnly, setOnlineOnly] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [globalSearch, setGlobalSearch] = useState(initialQuery);
+    const [displayCount, setDisplayCount] = useState(6);
 
     useEffect(() => {
         setGlobalSearch(searchParams.get('q') || '');
@@ -23,6 +24,7 @@ const Home = () => {
         setSelectedISPs(prev =>
             prev.includes(ispId) ? prev.filter(i => i !== ispId) : [...prev, ispId]
         );
+        setDisplayCount(6); // Reset on filter change
     };
 
     const filteredISPs = ISPS.filter(isp =>
@@ -39,7 +41,7 @@ const Home = () => {
         return ispMatch && statusMatch && searchMatch;
     });
 
-    const featuredServers = filteredServers.slice(0, 6);
+    const featuredServers = filteredServers.slice(0, displayCount);
 
     return (
         <main className="max-w-[1400px] mx-auto pb-20">
@@ -113,7 +115,10 @@ const Home = () => {
                                         type="checkbox"
                                         className="sr-only peer"
                                         checked={onlineOnly}
-                                        onChange={() => setOnlineOnly(!onlineOnly)}
+                                        onChange={() => {
+                                            setOnlineOnly(!onlineOnly);
+                                            setDisplayCount(6);
+                                        }}
                                     />
                                     <div className="w-9 h-5 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-accent"></div>
                                     <span className="ml-3 text-sm font-medium text-slate-300">Online only</span>
@@ -145,7 +150,7 @@ const Home = () => {
                             {selectedISPs.length > 0 ? 'Filtered Results' : 'Featured Servers'}
                         </h2>
                         <div className="text-sm text-slate-500">
-                            Showing <span className="text-primary font-bold">{filteredServers.length}</span> resources
+                            Showing <span className="text-primary font-bold">{featuredServers.length}</span> of <span className="font-bold">{filteredServers.length}</span> resources
                         </div>
                     </div>
 
@@ -161,11 +166,15 @@ const Home = () => {
                         )}
                     </div>
 
-                    <div className="flex justify-center pt-10">
-                        <button className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold rounded-xl transition-all active:scale-95 shadow-lg">
-                            Load More Servers
-                        </button>
-                    </div>
+                    {filteredServers.length > displayCount && (
+                        <div className="flex justify-center pt-10">
+                            <button
+                                onClick={() => setDisplayCount(prev => prev + 6)}
+                                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold rounded-xl transition-all active:scale-95 shadow-lg">
+                                Load More Servers
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </main>
