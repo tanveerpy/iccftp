@@ -10,9 +10,9 @@ const MovieServers = () => {
     return (
         <div className="max-w-[1400px] mx-auto pb-20 px-6 pt-10">
             <SEO
-                title="BDIX Movie Server List 2025 | Fast Streaming Portals"
-                description="Browse our curated list of authorized BDIX movie servers in Bangladesh. Find the fastest streaming links for ICC, Circle, SamOnline, and more."
-                keywords="movie server, bdix movie server, icc movie server, circle ftp movie, movie portal bd, live tv ftp"
+                title="BDIX Movie Server List 2025 | ICC FTP Movie Portal"
+                description="Browse our curated list of authorized BDIX movie servers in Bangladesh. Find the fastest streaming links for ICC FTP movie server, Circle, and SamOnline portals."
+                keywords="movie server, bdix movie server, icc movie server, icc ftp movie server, circle ftp movie, movie portal bd"
             />
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                 <div>

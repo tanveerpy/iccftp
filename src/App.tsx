@@ -42,8 +42,8 @@ function App() {
               <div>
                 <h4 className="text-white font-black mb-8 italic uppercase tracking-widest text-xs">Popular Searches</h4>
                 <ul className="space-y-4">
-                  <li><Link to="/ip/10.16.100.244" className="text-slate-500 hover:text-primary transition-colors text-sm font-bold">ICC FTP Server</Link></li>
-                  <li><Link to="/isp/circle" className="text-slate-500 hover:text-primary transition-colors text-sm font-bold">Circle FTP BDIX</Link></li>
+                  <li><Link to="/ip/10.16.100.244" className="text-slate-500 hover:text-primary transition-colors text-sm font-bold">ICC FTP Server BD</Link></li>
+                  <li><Link to="/ip/15.1.1.1" className="text-slate-500 hover:text-primary transition-colors text-sm font-bold">Circle Network 15.1.1.1</Link></li>
                   <li><Link to="/isp/samonline" className="text-slate-500 hover:text-primary transition-colors text-sm font-bold">SamOnline 172.16.50.4</Link></li>
                   <li><Link to="/ip/103.106.238.74" className="text-slate-500 hover:text-primary transition-colors text-sm font-bold">Carnival FTP Server</Link></li>
                 </ul>

@@ -55,15 +55,15 @@ const Home = () => {
             <section className="px-6 pb-10">
                 <div className="flex flex-wrap items-center justify-center gap-4 text-[10px] uppercase font-black tracking-widest text-slate-500">
                     <span className="text-primary italic">Trending:</span>
-                    <Link to="/ip/10.16.100.244" className="hover:text-white transition-colors cursor-pointer">10.16.1oo.244</Link>
+                    <Link to="/ip/10.16.100.244" className="hover:text-white transition-colors cursor-pointer">ICC FTP SERVER BD</Link>
                     <span className="w-1 h-1 bg-slate-800 rounded-full" />
-                    <Link to="/isp/circle" className="hover:text-white transition-colors cursor-pointer">Circle FTP</Link>
+                    <Link to="/ip/15.1.1.1" className="hover:text-white transition-colors cursor-pointer">15.1.1.1 Circle Network</Link>
                     <span className="w-1 h-1 bg-slate-800 rounded-full" />
-                    <Link to="/movie-servers" className="hover:text-white transition-colors cursor-pointer">FTTP Server</Link>
+                    <Link to="/movie-servers" className="hover:text-white transition-colors cursor-pointer">ICC Movie Server</Link>
                     <span className="w-1 h-1 bg-slate-800 rounded-full" />
                     <Link to="/?q=samonline" className="hover:text-white transition-colors cursor-pointer">Sam Online FTP</Link>
                     <span className="w-1 h-1 bg-slate-800 rounded-full" />
-                    <Link to="/movie-servers" className="hover:text-white transition-colors cursor-pointer">FTB Server BD</Link>
+                    <Link to="/movie-servers" className="hover:text-white transition-colors cursor-pointer">ICC FTP Movie Server</Link>
                 </div>
             </section>
 

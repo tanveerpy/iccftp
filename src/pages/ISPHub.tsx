@@ -16,9 +16,13 @@ const ISPHub = () => {
     return (
         <div className="max-w-[1400px] mx-auto pb-20 px-6 pt-10">
             <SEO
-                title={`${ispData.name} BDIX FTP & Movie Servers | Full List 2025`}
-                description={`Official index of BDIX movie servers and FTP portals for ${ispData.name} subscribers. Find fast local peering links and troubleshooting tips for your network.`}
-                keywords={`${ispData.name} ftp, ${ispData.name} login, bdix server, ftp server bd, local media portal`}
+                title={ispData.slug === 'icc' ? "ICC FTP Server BD | Movie Server List 2025" : `${ispData.name} BDIX FTP & Movie Servers | Full List 2025`}
+                description={ispData.slug === 'icc'
+                    ? "Official ICC FTP server list for Bangladesh. Access high-speed ICC movie portals, live TV, and BDIX peering links with 1Gbps speed. Verified 2025 guide."
+                    : `Official index of BDIX movie servers and FTP portals for ${ispData.name} subscribers. Find fast local peering links and troubleshooting tips for your network.`}
+                keywords={ispData.slug === 'icc'
+                    ? "icc ftp server bd, icc ftp server, icc ftp server list, icc movie server, bdix server"
+                    : `${ispData.name} ftp, ${ispData.name} login, bdix server, ftp server bd, local media portal`}
                 schema={{
                     "@context": "https://schema.org",
                     "@type": "WebPage",
