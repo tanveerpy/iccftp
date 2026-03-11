@@ -46,9 +46,9 @@ const Home = () => {
     return (
         <main className="max-w-[1400px] mx-auto pb-20">
             <SEO
-                title="BDIX FTP Server List 2025 | ICC, SamOnline, Circle FTP Portals"
-                description="The ultimate directory for Bangladesh BDIX FTP servers, movie portals, and live TV. Access ICC, Circle, SamOnline, and Amber IT localized services with 1Gbps speed."
-                keywords="ftp server, bdix tester, icc ftp server, circle ftp, 10.16.100.244, samonline ftp, movie server bd"
+                title="BDIX Server List & All FTP Server Links 2025"
+                description="The ultimate directory for all ftp server in Bangladesh, including ftp server list and bdix server list. Get the fastest icc ftp server link and sam online ftp."
+                keywords="ftp bd, ftp server list, bdix server list, all ftp server, icc ftp server link"
             />
             <Hero />
             {/* Trending row below Hero section */}

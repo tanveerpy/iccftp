@@ -12,25 +12,25 @@ export interface Server {
 
 export const SERVERS: Server[] = [
     // ICC Communication
-    { id: 'icc-media', name: 'ICC Media Server', isp: 'ICC', url: 'http://10.16.100.244/', status: 'online', speed: '1 Gbps', category: 'movies', description: 'Premier media portal for ICC subscribers.' },
+    { id: 'icc-media', name: 'icc ftp server movie', isp: 'ICC', url: 'http://10.16.100.244/', status: 'online', speed: '1 Gbps', category: 'movies', description: 'Premier icc ftp movie server and media portal for ICC subscribers.' },
     { id: 'icc-tv', name: 'ICC Live TV', isp: 'ICC', url: 'http://10.16.100.244/livetv.php', status: 'online', speed: '100 Mbps', category: 'tv' },
-    { id: 'icc-ftp-2', name: 'ICC FTP Server 2', isp: 'ICC', url: 'http://10.16.100.2/', status: 'slow', speed: '500 Mbps', category: 'ftp' },
-    { id: 'icc-portal', name: 'ICC Portal', isp: 'ICC', url: 'http://icc.com.bd', status: 'online', category: 'tools' },
+    { id: 'icc-ftp-2', name: 'icc ftp server bd', isp: 'ICC', url: 'http://10.16.100.2/', status: 'slow', speed: '500 Mbps', category: 'ftp', description: 'Fast icc ftp server link for dedicated peering.' },
+    { id: 'icc-portal', name: 'icc ftp server', isp: 'ICC', url: 'http://icc.com.bd', status: 'online', category: 'tools' },
 
     // Circle Network
-    { id: 'circle-ftp', name: 'Circle FTP Main', isp: 'Circle', url: 'http://circleftp.net/', status: 'online', speed: '1 Gbps', category: 'movies' },
-    { id: 'circle-local', name: 'Circle Local FTP', isp: 'Circle', url: 'http://15.1.1.1/', status: 'online', category: 'ftp' },
+    { id: 'circle-ftp', name: 'circle ftp server', isp: 'Circle', url: 'http://circleftp.net/', status: 'online', speed: '1 Gbps', category: 'movies', description: 'Main circle ftp server at http circleftp net.' },
+    { id: 'circle-local', name: '15.1.1.1 circle network', isp: 'Circle', url: 'http://15.1.1.1/', status: 'online', category: 'ftp' },
     { id: 'circle-ftp-2', name: 'Circle FTP 2', isp: 'Circle', url: 'http://ftp2.circleftp.net/', status: 'online', category: 'ftp' },
-    { id: 'circle-emby', name: 'Circle Emby', isp: 'Circle', url: 'http://emby.circleftp.net:8096', status: 'online', category: 'movies' },
+    { id: 'circle-emby', name: 'circle ftp live tv & Emby', isp: 'Circle', url: 'http://emby.circleftp.net:8096', status: 'online', category: 'movies' },
 
     // SamOnline
-    { id: 'sam-ftp', name: 'SamOnline FTP', isp: 'SamOnline', url: 'https://samftp.com', status: 'online', speed: '500 Mbps', category: 'movies' },
+    { id: 'sam-ftp', name: 'sam online ftp', isp: 'SamOnline', url: 'https://samftp.com', status: 'online', speed: '500 Mbps', category: 'movies' },
     { id: 'sam-local-1', name: 'SamOnline Local 1', isp: 'SamOnline', url: 'http://172.16.50.4', status: 'online', category: 'ftp' },
     { id: 'sam-tv-1', name: 'DhakaFlix TV 1', isp: 'SamOnline', url: 'http://172.16.50.22', status: 'online', category: 'tv' },
 
     // Link3
     { id: 'link3-cinehub', name: 'Cinehub24', isp: 'Link3', url: 'http://www.cinehub24.com', status: 'online', speed: '1 Gbps', category: 'movies' },
-    { id: 'link3-ftpbd', name: 'FTPBD Main', isp: 'Link3', url: 'http://ftpbd.net', status: 'online', speed: '1 Gbps', category: 'movies' },
+    { id: 'link3-ftpbd', name: 'ftp bd Main', isp: 'Link3', url: 'http://ftpbd.net', status: 'online', speed: '1 Gbps', category: 'movies' },
     { id: 'link3-discovery', name: 'Discovery FTP', isp: 'Link3', url: 'http://discoveryftp.net', status: 'online', category: 'movies' },
 
     // Amber IT
@@ -56,7 +56,7 @@ export const SERVERS: Server[] = [
     { id: 'netexpress-sport', name: 'NetExpress Sport', isp: 'Generic', url: 'http://netexpress-sport.blogspot.com', status: 'online', category: 'tv' },
     { id: 'iccms-edu', name: 'ICCMS Edu Portal', isp: 'ICC', url: 'http://www.iccms.edu.bd', status: 'online', category: 'tools', description: 'Institutional access and educational resources.' },
     { id: 'blinn-wifi', name: 'Blinn WiFi', isp: 'Generic', url: 'http://blinnwifi.net', status: 'online', category: 'tools' },
-    { id: 'local-gateway-1', name: 'Local Gateway Sync', isp: 'Generic', url: 'http://192.168.50.100', status: 'online', category: 'ftp', description: 'Local network configuration and file sync.' },
+    { id: 'local-gateway-1', name: '10.16.1oo.244 (Typo Fix)', isp: 'Generic', url: 'http://10.16.100.244', status: 'online', category: 'ftp', description: 'Local network configuration and file sync.' },
 
     // Generic BDIX / Other
     { id: 'cinema-bazar', name: 'Cinema Bazar', isp: 'BDIX', url: 'http://103.81.104.98/', status: 'online', category: 'movies' },

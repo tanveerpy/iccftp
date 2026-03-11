@@ -4,7 +4,7 @@ import { Zap, Search, Shield, Globe, Terminal, Activity, ArrowLeft, Loader2, Che
 import SEO from '../components/SEO';
 
 const toolsList = [
-    { id: 'bdix-tester', name: 'BDIX Speed Tester', desc: 'Real-time throughput testing for your local network peering.', icon: Zap, color: 'text-yellow-500', bgColor: 'bg-yellow-500/10' },
+    { id: 'bdix-tester', name: 'Bdix Tester', desc: 'Use our bdix tester online for real-time throughput testing of your local network peering.', icon: Zap, color: 'text-yellow-500', bgColor: 'bg-yellow-500/10' },
     { id: 'ip-lookup', name: 'BDIX IP Lookup', desc: 'Detect if an IP address is part of the Bangladesh Internet Exchange.', icon: Search, color: 'text-blue-500', bgColor: 'bg-blue-500/10' },
     { id: 'server-search', name: 'FTP Server Search', desc: 'Advanced crawler for scanning open BDIX file directories.', icon: Terminal, color: 'text-purple-500', bgColor: 'bg-purple-500/10' },
     { id: 'isp-detect', name: 'ISP Detector', desc: 'Identify your current ISP and BDIX peering information.', icon: Globe, color: 'text-green-500', bgColor: 'bg-green-500/10' },
@@ -175,9 +175,9 @@ const Tools = () => {
     return (
         <div className="max-w-[1400px] mx-auto pb-20 px-6 pt-10 text-white">
             <SEO
-                title="Advanced BDIX Network Tools & Analytical Utilities"
-                description="Optimize your connection with our collection of BDIX speed testers, IP lookup tools, and ISP detectors. Designed for high-performance ROI in Bangladesh."
-                keywords="bdix tester, ip lookup bd, server search, network tools, ftp troubleshooting"
+                title="Bdix Tester Online & BDIX Network Tools"
+                description="Optimize your connection with our collection of bdix tester online tools, IP lookup tools, and ISP detectors. Designed for high-performance ROI in Bangladesh."
+                keywords="bdix tester online, bdix tester, ip lookup bd, server search, network tools, ftp troubleshooting"
             />
             <div className="text-center mb-20 relative">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/20 blur-[100px] -z-10" />

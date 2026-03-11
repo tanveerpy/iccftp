@@ -16,13 +16,14 @@ const ISPHub = () => {
     return (
         <div className="max-w-[1400px] mx-auto pb-20 px-6 pt-10">
             <SEO
-                title={ispData.slug === 'icc' ? "ICC FTP Server BD | Movie Server List 2025" : `${ispData.name} BDIX FTP & Movie Servers | Full List 2025`}
+                title={ispData.slug === 'icc' ? "ICC FTP Server BD | Movie Server List 2025" : ispData.slug === 'circle' ? "Circle FTP Server | http circleftp net guide" : `${ispData.name} BDIX FTP & Movie Servers | Full List 2025`}
                 description={ispData.slug === 'icc'
-                    ? "Official ICC FTP server list for Bangladesh. Access high-speed ICC movie portals, live TV, and BDIX peering links with 1Gbps speed. Verified 2025 guide."
-                    : `Official index of BDIX movie servers and FTP portals for ${ispData.name} subscribers. Find fast local peering links and troubleshooting tips for your network.`}
+                    ? "Official icc ftp server list for Bangladesh. Access high-speed icc movie server portals, live TV, and BDIX peering links with 1Gbps speed. Verified 2025 guide."
+                    : ispData.slug === 'circle' ? "Official index of circle ftp server at http circleftp net. Access circle ftp live tv and movies with ultra low latency." : `Official index of BDIX movie servers and FTP portals for ${ispData.name} subscribers. Find fast local peering links and troubleshooting tips for your network.`}
                 keywords={ispData.slug === 'icc'
                     ? "icc ftp server bd, icc ftp server, icc ftp server list, icc movie server, bdix server"
-                    : `${ispData.name} ftp, ${ispData.name} login, bdix server, ftp server bd, local media portal`}
+                    : ispData.slug === 'circle' ? "http circleftp net, circle ftp live tv, circle ftp server, circle ftp" : `${ispData.name} ftp, ${ispData.name} login, bdix server, ftp server bd, local media portal`}
+
                 schema={{
                     "@context": "https://schema.org",
                     "@type": "WebPage",

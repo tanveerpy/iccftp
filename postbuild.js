@@ -14,15 +14,15 @@ const routes = [
     },
     {
         path: '/live-tv',
-        title: 'BDIX Live TV Portals 2025 | ICC, Sam, Toffee, Bioscope',
-        description: 'Stream live TV in Bangladesh with zero lag using BDIX portals. Access ICC TV, SamOnline DhakaFlix, Toffee, and Sportzfy through high-speed local peering.',
-        keywords: 'live tv ftp, bdix tv, icctv, dhakaflix, toffee live, bioscope live tv, sportzfy tv bd'
+        title: 'BDIX Live TV Portals & FTP Server BD Live TV 2025',
+        description: 'Stream live TV in Bangladesh with zero lag using ftp server bd live tv portals. Access ICC TV, ftp server live tv, Toffee, and Sportzfy through high-speed peering.',
+        keywords: 'ftp server bd live tv, ftp server live tv, live tv ftp, bdix tv, icctv, dhakaflix, toffee live'
     },
     {
         path: '/tools',
-        title: 'Advanced BDIX Network Tools & Analytical Utilities',
-        description: 'Optimize your connection with our collection of BDIX speed testers, IP lookup tools, and ISP detectors. Designed for high-performance ROI in Bangladesh.',
-        keywords: 'bdix tester, ip lookup bd, server search, network tools, ftp troubleshooting'
+        title: 'Bdix Tester Online & BDIX Network Tools',
+        description: 'Optimize your connection with our collection of bdix tester online tools, IP lookup tools, and ISP detectors. Designed for high-performance ROI in Bangladesh.',
+        keywords: 'bdix tester online, bdix tester, ip lookup bd, server search, network tools, ftp troubleshooting'
     },
     {
         path: '/guides',
@@ -32,21 +32,33 @@ const routes = [
     },
     {
         path: '/isp/icc',
-        title: 'ICC Communication FTP & Media Portals',
-        description: 'Access ICC Communication media servers, Live TV, and FTP hubs for high-speed streaming.',
-        keywords: 'icc ftp, icc communication bd, icc live tv, icc movies, icc media server'
+        title: 'ICC FTP Server BD | Movie Server List 2025',
+        description: 'Official icc ftp server list for Bangladesh. Access high-speed icc movie server portals, live TV, and BDIX peering links with 1Gbps speed. Verified 2025 guide.',
+        keywords: 'icc ftp server bd, icc ftp server, icc ftp server list, icc movie server, bdix server'
     },
     {
         path: '/isp/circle',
-        title: 'Circle Network FTP & Emby Hub',
-        description: 'Connect to Circle Network FTP, movie directory, and Emby servers. Maximize your entertainment with direct BDIX connectivity.',
-        keywords: 'circle ftp, circle network bd, circle emby, circle media portal'
+        title: 'Circle FTP Server | http circleftp net guide',
+        description: 'Official index of circle ftp server at http circleftp net. Access circle ftp live tv and movies with ultra low latency.',
+        keywords: 'http circleftp net, circle ftp live tv, circle ftp server, circle ftp'
     },
     {
         path: '/isp/samonline',
         title: 'SamOnline FTP and Movie Directory',
         description: 'Discover the SamOnline BDIX FTP servers and resources. Blazing fast downloads and lag-free streaming.',
         keywords: 'samonline ftp, sam ftp, dhakaflix, samonline bdix'
+    },
+    {
+        path: '/ip/10.16.100.244',
+        title: '10.16.100.244 | ICC FTP Server BD Media Portal',
+        description: 'Official connection guide for ICC FTP Server 10.16.100.244. Access the premier movie and media portal for ICC Communication subscribers in Bangladesh.',
+        keywords: '10.16.100.244, bdix ip, ftp server ip, local gateway, 10.16.1oo.244, icc ftp server bd'
+    },
+    {
+        path: '/ip/15.1.1.1',
+        title: '15.1.1.1 | Circle Network FTP & Live TV Portal',
+        description: 'Access 15.1.1.1 Circle Network FTP and movie server. High-speed local peering guide for Circle Network subscribers in Bangladesh.',
+        keywords: '15.1.1.1, bdix ip, 15.1.1.1 circle network, circle network 15.1.1.1'
     }
 ];
 
