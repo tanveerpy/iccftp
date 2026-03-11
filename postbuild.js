@@ -66,15 +66,26 @@ routes.forEach(route => {
         fs.mkdirSync(routeDir, { recursive: true });
     }
 
-    let modifiedHtml = template.replace(/<title>.*?<\/title>/, `<title>${route.title}</title>`);
-    modifiedHtml = modifiedHtml.replace(/<meta name="description" content=".*?"\s*\/>/, `<meta name="description" content="${route.description}" />`);
-    modifiedHtml = modifiedHtml.replace(/<meta name="keywords" content=".*?"\s*\/>/, `<meta name="keywords" content="${route.keywords}" />`);
-    modifiedHtml = modifiedHtml.replace(/<meta property="og:title" content=".*?"\s*\/>/, `<meta property="og:title" content="${route.title}" />`);
-    modifiedHtml = modifiedHtml.replace(/<meta property="og:description" content=".*?"\s*\/>/, `<meta property="og:description" content="${route.description}" />`);
-    modifiedHtml = modifiedHtml.replace(/<meta property="og:url" content=".*?"\s*\/>/, `<meta property="og:url" content="https://iccftpserver.online${route.path}" />`);
-    modifiedHtml = modifiedHtml.replace(/<meta name="twitter:title" content=".*?"\s*\/>/, `<meta name="twitter:title" content="${route.title}" />`);
-    modifiedHtml = modifiedHtml.replace(/<meta name="twitter:description" content=".*?"\s*\/>/, `<meta name="twitter:description" content="${route.description}" />`);
-    modifiedHtml = modifiedHtml.replace(/<link rel="canonical" href=".*?"\s*\/>/, `<link rel="canonical" href="https://iccftpserver.online${route.path}" />`);
+    let modifiedHtml = template.replace(/<title>[\s\S]*?<\/title>/, `<title>${route.title}</title>`);
+    modifiedHtml = modifiedHtml.replace(/<meta name="description"[\s\S]*?>/, `<meta name="description" content="${route.description}" />`);
+    modifiedHtml = modifiedHtml.replace(/<meta name="keywords"[\s\S]*?>/, `<meta name="keywords" content="${route.keywords}" />`);
+    modifiedHtml = modifiedHtml.replace(/<meta property="og:title"[\s\S]*?>/, `<meta property="og:title" content="${route.title}" />`);
+    modifiedHtml = modifiedHtml.replace(/<meta property="og:description"[\s\S]*?>/, `<meta property="og:description" content="${route.description}" />`);
+    modifiedHtml = modifiedHtml.replace(/<meta property="og:url"[\s\S]*?>/, `<meta property="og:url" content="https://iccftpserver.online${route.path}" />`);
+    modifiedHtml = modifiedHtml.replace(/<meta name="twitter:title"[\s\S]*?>/, `<meta name="twitter:title" content="${route.title}" />`);
+    modifiedHtml = modifiedHtml.replace(/<meta name="twitter:description"[\s\S]*?>/, `<meta name="twitter:description" content="${route.description}" />`);
+    modifiedHtml = modifiedHtml.replace(/<link rel="canonical"[\s\S]*?>/, `<link rel="canonical" href="https://iccftpserver.online${route.path}" />`);
+
+    // Inject barebones SEO content into #root so non-JS crawlers see SOME content
+    const baseContent = `<div id="root">
+        <div style="padding: 40px; background: #020617; color: #fff; min-height: 100vh; font-family: sans-serif;">
+            <h1>${route.title}</h1>
+            <p>${route.description}</p>
+            <p>Loading application content...</p>
+        </div>
+    </div>`;
+    modifiedHtml = modifiedHtml.replace(/<div id="root"><\/div>/, baseContent);
+
 
     fs.writeFileSync(path.join(routeDir, 'index.html'), modifiedHtml);
     console.log(`Generated HTML for ${route.path}`);
