@@ -7,6 +7,12 @@ const __dirname = path.dirname(__filename);
 
 const routes = [
     {
+        path: '/',
+        title: 'FTPHub | BDIX Movie Servers, Live TV & FTP Server BD 2025',
+        description: 'The premier resource for Bangladesh Internet peering. Discover the fastest BDIX movie servers, FTP portals, and Live TV links in Bangladesh.',
+        keywords: 'ftphub, bdix movie server, ftp server bd, movie server list, bdix tester, circle ftp, icc ftp'
+    },
+    {
         path: '/movie-servers',
         title: 'BDIX Movie Servers & Portals 2025 | Fastest FTP Links',
         description: 'Explore the fastest BDIX movie servers and FTP portals in Bangladesh including Cinehub24, FTPBD, Mojaloss, and SamOnline.',
@@ -29,6 +35,36 @@ const routes = [
         title: 'BDIX Guides & Network Setup Tutorials',
         description: 'Learn how to configure your router for BDIX, use IDM, bypass bandwidth limits, and troubleshoot FTP connections.',
         keywords: 'how to use bdix, idm bdix setup, bypass ftp limits, router config bdix, ftp troubleshooting bd'
+    },
+    {
+        path: '/guides/what-is-bdix',
+        title: 'What is BDIX? | Bangladesh Internet Exchange Guide',
+        description: 'A comprehensive guide to understanding BDIX, local peering, and why it provides blazing fast speeds for FTP servers and streaming.',
+        keywords: 'what is bdix, bdix meaning, local peering bangladesh, ixp bd'
+    },
+    {
+        path: '/guides/how-to-connect',
+        title: 'How to Connect to FTP Servers | Step-by-Step Guide',
+        description: 'Learn how to access BDIX movie servers using your browser, VLC media player, or dedicated FTP clients like FileZilla.',
+        keywords: 'how to connect ftp, access movie server, ftp vlc guide'
+    },
+    {
+        path: '/guides/ftp-client-guide',
+        title: 'Best FTP Clients 2025 for BDIX Users',
+        description: 'Reviewing the top FTP clients for Bangladesh: FileZilla vs WinSCP vs Cyberduck. Optimize your download speeds.',
+        keywords: 'best ftp client, filezilla bd, winscp guide'
+    },
+    {
+        path: '/guides/network-troubleshooting',
+        title: 'Speed Optimization & Network Troubleshooting',
+        description: 'Fix slow BDIX speeds and troubleshoot connection issues with local FTP servers and media portals.',
+        keywords: 'fix slow bdix, ftp connection error, speed up ftp'
+    },
+    {
+        path: '/guides/secure-browsing',
+        title: 'Safe File Transfers & Secure Browsing in Bangladesh',
+        description: 'How to stay safe while using open network directories and BDIX FTP servers. Privacy and security tips.',
+        keywords: 'secure ftp, anonymous browsing bd, safe file transfer'
     },
     {
         path: '/isp/icc',
